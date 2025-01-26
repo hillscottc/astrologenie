@@ -9,6 +9,12 @@ on:
       - main
   workflow_dispatch:
 
+# Optional: environment variables can be injected here
+# Add these variables in your repository Settings - Secrets and variables - Actions - variables
+env:
+  # VITE_OPENAI_APIKEY: ${{ env.VITE_OPENAI_APIKEY }}
+  VITE_OPENAI_APIKEY: ${{ secrets.VITE_OPENAI_APIKEY }}
+
 jobs:
   build:
     runs-on: windows-latest
